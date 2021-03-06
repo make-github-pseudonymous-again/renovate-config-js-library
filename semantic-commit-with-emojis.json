@@ -1,0 +1,48 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "semanticCommits": "disabled",
+  "commitMessagePrefix": ":package: deps:",
+  "packageRules": [
+    {
+      "matchUpdateTypes": [
+        "major",
+        "minor",
+        "patch"
+      ],
+      "commitMessagePrefix": ":arrow_up: deps:",
+      "commitMessageAction": "Upgrade"
+    },
+    {
+      "matchUpdateTypes": [
+        "rollback"
+      ],
+      "commitMessagePrefix": ":arrow_down: deps:",
+      "commitMessageAction": "Downgrade"
+    },
+    {
+      "matchUpdateTypes": [
+        "lockFileMaintenance"
+      ],
+      "commitMessagePrefix": ":lock: deps:"
+    },
+    {
+      "matchUpdateTypes": [
+        "pin"
+      ],
+      "commitMessagePrefix": ":pushpin: deps:",
+      "commitMessageAction": "Pin"
+    },
+    {
+      "matchUpdateTypes": [
+        "digest"
+      ],
+      "commitMessagePrefix": ":whale: deps:"
+    },
+    {
+      "matchUpdateTypes": [
+        "bump"
+      ],
+      "commitMessagePrefix": ":hatching_chick: release:"
+    }
+  ]
+}

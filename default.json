@@ -1,0 +1,12 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:base",
+    ":label(renovate)",
+    "schedule:nonOfficeHours",
+    "github>aureooms/renovate-config-js-library:label-deps-changes",
+    "github>aureooms/renovate-config-js-library:semantic-commit-with-emojis",
+    ":automergeDisabled",
+    "github>aureooms/renovate-config-js-library:automerge-non-bump"
+  ]
+}

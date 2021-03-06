@@ -1,0 +1,17 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "packageRules": [
+    {
+      "matchUpdateTypes": [
+        "major",
+        "minor",
+        "patch",
+        "rollback",
+        "lockFileMaintenance",
+        "pin",
+        "digest"
+      ],
+      "automerge": true
+    }
+  ]
+}
