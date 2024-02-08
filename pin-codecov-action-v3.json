@@ -1,0 +1,10 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "packageRules": [
+    {
+      "matchPackageNames": ["codecov/codecov-action"],
+      "matchManagers": ["github-actions"],
+      "allowedVersions": "<4"
+    }
+  ]
+}

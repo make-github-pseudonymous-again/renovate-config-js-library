@@ -8,6 +8,7 @@
     "github>make-github-pseudonymous-again/renovate-config-js-library:semantic-commit-with-emojis",
     ":automergeDisabled",
     "github>make-github-pseudonymous-again/renovate-config-js-library:automerge-non-bump",
-    ":disableDependencyDashboard"
+    ":disableDependencyDashboard",
+    "github>make-github-pseudonymous-again/renovate-config-js-library:pin-codecov-action-v3"
   ]
 }
