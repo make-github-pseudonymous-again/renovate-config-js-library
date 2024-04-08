@@ -2,6 +2,23 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "semanticCommits": "disabled",
   "commitMessagePrefix": ":package: deps:",
+  "commitMessageExtra": "to {{#if isPinDigest}}{{{newDigestShort}}}{{else}}{{#if isMajor}}{{prettyNewMajor}}{{else}}{{#if isSingleVersion}}{{prettyNewVersion}}{{else}}{{#if newValue}}{{{newValue}}}{{else}}{{{newDigestShort}}}{{/if}}{{/if}}{{/if}}{{/if}}.",
+  "group": {
+    "branchTopic": "{{{groupSlug}}}",
+    "commitMessageTopic": "{{{groupName}}}."
+  },
+  "vulnerabilityAlerts": {
+    "labels": ["security"],
+    "schedule": [],
+    "dependencyDashboardApproval": false,
+    "minimumReleaseAge": "0 days",
+    "rangeStrategy": "update-lockfile",
+    "commitMessagePrefix": ":bomb: deps:",
+    "commitMessageExtra": "to {{#if isPinDigest}}{{{newDigestShort}}}{{else}}{{#if isMajor}}{{prettyNewMajor}}{{else}}{{#if isSingleVersion}}{{prettyNewVersion}}{{else}}{{#if newValue}}{{{newValue}}}{{else}}{{{newDigestShort}}}{{/if}}{{/if}}{{/if}}{{/if}}",
+    "commitMessageSuffix": "[SECURITY].",
+    "branchTopic": "{{{datasource}}}-{{{depName}}}-vulnerability",
+    "prCreation": "immediate"
+  },
   "packageRules": [
     {
       "matchUpdateTypes": [
